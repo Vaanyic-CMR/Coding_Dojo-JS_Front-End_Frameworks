@@ -1,0 +1,9 @@
+<div [class.app]="true">
+    <h1>Date Formats</h1>
+    <p>date - {{ now | date }}</p>
+    <p>fullDate - {{ now | date:'fullDate' }}</p>
+    <p>longDate - {{ now | date:'longDate' }}</p>
+    <p>mediumDate - {{ now | date:'mediumDate' }}</p>
+    <p>shortDate - {{ now | date:'shortDate' }}</p>
+    <p>custom - {{ now | date:'MM/dd/YYYY' }}</p>
+</div>

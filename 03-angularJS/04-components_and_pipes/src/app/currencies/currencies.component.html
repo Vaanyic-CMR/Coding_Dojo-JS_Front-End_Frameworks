@@ -1,0 +1,7 @@
+<div [class.app]="true">
+    <h1>Currency Formats</h1>
+    <p>USD (no format) - {{ value | currency }}</p>
+    <p>EUR (currency format) - {{ value | currency:'EUR' }}</p>
+    <p>AUS (currency 1.2 format = 2 dec values) - {{ value | currency:'AUS':true }}</p>
+    <p>CNY (1.0=0 dec values if value over '0' percent) - {{ value | currency:'CNY':true:'1.2' }}</p>
+</div>

@@ -1,0 +1,6 @@
+<div [class.app]="true">
+    <h1>Time Formats</h1>
+    <p>mediumTime - {{ now | date:'mediumTime' }}</p>
+    <p>shortTime - {{ now | date:'shortTime' }}</p>
+    <p>custom - {{ now | date:'hh:mm:ss a':'locale' }}</p>
+</div>
