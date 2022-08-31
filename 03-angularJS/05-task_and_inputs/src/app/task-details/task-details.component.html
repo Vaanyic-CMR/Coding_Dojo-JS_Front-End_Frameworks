@@ -1,0 +1,16 @@
+<div [class.task-details]="true">
+    <h3>Tasks Details Component</h3>
+    <p>Task Title: {{ task.title }}</p>
+    <div [class.task-complete]=task.status [class.task-incomplete]=!task.status>
+        <button
+            *ngIf="task.status"
+            (click)="buttonClick()"
+        >Click to mark Incomplete</button>
+        <button
+            *ngIf="!task.status"
+            (click)="buttonClick()"
+        >Click to Complete</button>
+        <p *ngIf="task.status">Completed</p>
+        <p *ngIf="!task.status">Incompleted</p>
+    </div>
+</div>

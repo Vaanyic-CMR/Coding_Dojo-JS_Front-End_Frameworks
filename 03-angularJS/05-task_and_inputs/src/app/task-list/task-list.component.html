@@ -1,0 +1,6 @@
+<div [class.task-list]="true">
+    <h2>Task List Component</h2>
+    <div *ngFor="let task of tasks; let i=index">
+        <app-task-details [task]="task" (toggleTaskStatus)="toggleTask(i)"></app-task-details>
+    </div>
+</div>

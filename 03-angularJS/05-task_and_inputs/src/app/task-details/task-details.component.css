@@ -1,0 +1,13 @@
+.task-details {
+    margin: 10px;
+    padding: 20px;
+    border: dashed;
+}
+.task-complete {
+    padding: 20px;
+    border: dashed #4AA64A;
+}
+.task-incomplete {
+    padding: 20px;
+    border: dashed #F42519;
+}
