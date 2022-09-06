@@ -1,0 +1,25 @@
+<div [class.product-list]="true">
+    <h1>Product List</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+            <th>Actions</th>
+        </thead>
+        <tbody *ngFor="let product of products.getAll(); let idx=index">
+            <td>{{ product.name }}</td>
+            <td>{{ product.desc }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.created_at }}</td>
+            <td>{{ product.updated_at }}</td>
+            <td>
+                <button (click)="products.remove(idx)">Delete</button>
+            </td>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,42 @@
+<div [class.product-new]="true">
+    <h1>New Product Creation</h1>
+    <form (submit)="formSubmit(formData)" #formData="ngForm">
+        <label [class.spacing]="true">Name:</label>
+        <input
+            [class.spacing]="true"
+            type="text"
+            name="name"
+            [(ngModel)]="product.name"
+            #name="ngModel"
+        />
+
+        <label [class.spacing]="true">Description:</label>
+        <input
+            [class.spacing]="true"
+            type="text"
+            name="desc"
+            [(ngModel)]="product.desc"
+            #desc="ngModel"
+        />
+
+        <label [class.spacing]="true">Price:</label>
+        <input
+            [class.spacing]="true"
+            type="text"
+            name="price"
+            [(ngModel)]="product.price"
+            #price="ngModel"
+        />
+
+        <label [class.spacing]="true">Quantity:</label>
+        <input
+            [class.spacing]="true"
+            type="text"
+            name="quantity"
+            [(ngModel)]="product.quantity"
+            #quantity="ngModel"
+        />
+
+        <input type="submit" [class.spacing]="true">
+    </form>
+</div>

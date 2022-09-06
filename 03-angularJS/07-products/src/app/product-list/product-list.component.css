@@ -1,0 +1,15 @@
+.product-list {
+    padding: 10px;
+    margin: 5px;
+    border: solid black;
+}
+th, td {
+    border: 1px dashed;
+    padding: 5px;
+}
+table {
+    border: 2px ridge black;
+    border-radius: 5px;
+    padding: 1px;
+    width: 100%;
+}
