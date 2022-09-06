@@ -1,0 +1,5 @@
+<button (click)="users.add()" [class.btn]="true">Add User</button>
+<p>{{ users | json }}</p>
+<ul>
+    <li *ngFor="let user of users.getAll()">{{ user.name }} | {{ user.created_at }}</li>
+</ul>
