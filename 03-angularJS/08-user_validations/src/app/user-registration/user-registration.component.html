@@ -1,0 +1,118 @@
+<div [class.row]="true">
+    <h1>Form Template</h1>
+    <form (submit)="formSubmit(formData)" #formData="ngForm">
+        <div [class.row]="true">
+            <label for="first_name" [class.form-label]="true">First Name:</label>
+            <div *ngIf="first_name.touched">
+                <p *ngIf="first_name.errors != null"
+                >{{ first_name.errors | json }}</p>
+                <p *ngIf="first_name.errors?.['required']"
+                >First Name is required.</p>
+                <p *ngIf="first_name.errors?.['minlength']"
+                >First Name must be at least 2 characters long.</p>
+            </div>
+            <input
+                [class.form-input]="true"
+                type="text"
+                name="first_name"
+                required
+                minlength="2" maxlength="24"
+                [(ngModel)]="user.first_name"
+                #first_name="ngModel"
+            />
+        </div>
+        <div [class.row]="true">
+            <label for="last_name" [class.form-label]="true">Last Name:</label>
+            <div *ngIf="last_name.touched">
+                <p *ngIf="last_name.errors != null"
+                >{{ last_name.errors | json }}</p>
+                <p *ngIf="last_name.errors?.['required']"
+                >Last Name is required.</p>
+                <p *ngIf="last_name.errors?.['minlength']"
+                >Last Name must be at least 2 characters long.</p>
+            </div>
+            <input
+                [class.form-input]="true"
+                type="text"
+                name="last_name"
+                required
+                minlength="4" maxlength="24"
+                [(ngModel)]="user.last_name"
+                #last_name="ngModel"
+            />
+        </div>
+        <div [class.row]="true">
+            <label for="email" [class.form-label]="true">Email:</label>
+            <div *ngIf="email.touched">
+                <p *ngIf="email.errors != null"
+                >{{ email.errors | json }}</p>
+                <p *ngIf="email.errors?.['required']"
+                >Email is required.</p>
+                <p *ngIf="email.errors?.['minlength']"
+                >Email must be at least 2 characters long.</p>
+            </div>
+            <input
+                [class.form-input]="true"
+                type="email"
+                name="email"
+                required
+                minlength="2" maxlength="24"
+                [(ngModel)]="user.email"
+                #email="ngModel"
+            />
+        </div>
+        <div [class.row]="true">
+            <label for="password" [class.form-label]="true">Password:</label>
+            <p
+                *ngIf="password.touched && password.errors != null"
+            >{{ password.errors | json }}</p>
+            <input
+                [class.form-input]="true"
+                type="password"
+                name="password"
+                required
+                minlength="8"
+                [(ngModel)]="user.password"
+                #password="ngModel"
+            />
+        </div>
+        <div [class.row]="true">
+            <label for="confirm_password" [class.form-label]="true">Re-Enter Password</label>
+            <p
+                *ngIf="confirm_password.dirty && user.password != user.confirm_password"
+            >Passwords must match.</p>
+            <input
+                [class.form-input]="true"
+                type="password"
+                name="confirm_password"
+                required
+                minlength="8"
+                [(ngModel)]="user.confirm_password"
+                #confirm_password="ngModel"
+            />
+        </div>
+        <div [class.row]="true">
+            <label for="state" [class.form-label]="true">State:</label>
+            <p
+                *ngIf="state.touched && state.errors != null"
+            >{{ state.errors | json }}</p>
+            <select
+                [class.form-input]="true"
+                type="text"
+                name="state"
+                [(ngModel)]="user.state"
+                #state="ngModel"
+            >
+                <option value="" selected disabled hidden>Select State</option>
+                <option value="MA">MA</option>
+            </select>
+        </div>
+        <input
+            type="submit"
+            required
+            [class.row]="true"
+            [class.form-input]="true"
+            [disabled]="!formData.form.valid"
+        />
+    </form>
+</div>

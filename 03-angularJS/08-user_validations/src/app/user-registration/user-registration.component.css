@@ -1,0 +1,35 @@
+.row {
+    margin: 10px;
+}
+.form-label {
+    display: block;
+    font-size: large;
+}
+.form-input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: large;
+}
+
+/* ----------------- | Validation Classes | ----------------- */
+/* .ng-valid { } #is set if the form control is valid. */
+.ng-valid {
+    border-color: rgba(0, 255, 55, 0.5);
+    border-width: 3px;
+}
+/* .ng-invalid { } #is set if the form control is invalid. */
+.ng-invalid {
+    border-color: rgb(255, 0, 0, 0.5);
+    border-width: 3px;
+}
+/* .ng-pristine { } #is set if the form control has been changed and pristine. */
+/* .ng-pristine {} */
+/* .ng-dirty { } #is set if the form control has been changed and dirty. */
+/* .ng-dirty {} */
+/* .ng-touched { } #is set if the form control has been visited. */
+/* .ng-touched {} */
+/* .ng-untouched { } #is set if the form control has not been visited. */
+.ng-untouched {
+    border-color: black;
+    border-width: 2px;
+}
