@@ -1,0 +1,42 @@
+<div>
+    <h3>Edit Note</h3>
+    <form (submit)="formSubmit(formData)" #formData="ngForm">
+        <input
+            type="hidden"
+            value="selected_note.id"
+            [(ngModel)]="selected_note.id"
+            #note_id="ngModel"
+        />
+        <div *ngIf="note_content.touched && selected_note.id != null">
+            <p *ngIf="note_content.errors != null"
+                >{{ note_content.errors | json }}</p>
+            <p *ngIf="note_content.errors?.['required']"
+                >Note content is required.</p>
+            <p *ngIf="note_content.errors?.['minlength']"
+                >Note must be at least 5 characters long.</p>
+        </div>
+        <label for="note">Note:</label>
+        <input
+            type="text"
+            name="note"
+            required
+            minlength="5"
+            [(ngModel)]="selected_note.note"
+            #note_content="ngModel"
+        />
+        <input
+            type="hidden"
+            value="selected_note.created_at"
+            [(ngModel)]="selected_note.created_at"
+            #note_created_at="ngModel"
+        />
+        <input
+            type="hidden"
+            value="selected_note.updated_at"
+            [(ngModel)]="selected_note.updated_at"
+            #note_updated_at="ngModel"
+        />
+        <input type="submit">
+        <div><button (click)="cancelNote.emit()">Cancel</button></div>
+    </form>
+</div>

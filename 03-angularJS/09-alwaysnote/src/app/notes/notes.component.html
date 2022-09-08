@@ -1,0 +1,3 @@
+<app-note-new></app-note-new>
+<app-note-list (sendNote)="receiveNote($event)"></app-note-list>
+<app-note-edit (cancelNote)="resetNote()" [selected_note]="selected_note"></app-note-edit>

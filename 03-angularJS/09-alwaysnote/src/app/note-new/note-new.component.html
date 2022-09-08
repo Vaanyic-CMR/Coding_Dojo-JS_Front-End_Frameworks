@@ -1,0 +1,23 @@
+<div>
+    <h1>Create a new note</h1>
+    <form (submit)="formSubmit(formData)" #formData="ngForm">
+        <div *ngIf="note_content.touched">
+            <p *ngIf="note_content.errors != null"
+            >{{ note_content.errors | json }}</p>
+            <p *ngIf="note_content.errors?.['required']"
+            >Note content is required.</p>
+            <p *ngIf="note_content.errors?.['minlength']"
+            >Note must be at least 5 characters long.</p>
+        </div>
+        <label for="note">Note:</label>
+        <input
+            type="text"
+            name="note"
+            required
+            minlength="5"
+            [(ngModel)]="note.note_content"
+            #note_content="ngModel"
+        />
+        <input type="submit">
+    </form>
+</div>
