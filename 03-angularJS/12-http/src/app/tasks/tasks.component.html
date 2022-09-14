@@ -1,0 +1,20 @@
+<h1>Tasks</h1>
+<form (submit)="createTask(formData)" #formData="ngForm">
+    <input
+        type="text"
+        name="title"
+        [(ngModel)]="task.title"
+        #title="ngModel"
+    >
+    <input
+        type="text"
+        name="content"
+        [(ngModel)]="task.content"
+        #content="ngModel"
+    >
+    <input type="submit">
+</form>
+<hr/>
+<ul *ngFor="let task of tasks">
+    <li>{{task.title}} - {{task.content}}</li>
+</ul>
