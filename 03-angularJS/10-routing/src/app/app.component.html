@@ -1,0 +1,17 @@
+<!-- app.component.html (App Component's Template) -->
+<h1>App Component</h1>
+<hr/>
+<h3>Links</h3>
+<div>
+    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="['/notes']">Notes</a>
+    <a [routerLink]="['/tasks']">Tasks</a>
+</div>
+<h3>Click Events</h3>
+<div>
+    <button [routerLink]="['/home']">Home</button>
+    <button [routerLink]="['/notes']">Notes</button>
+    <button [routerLink]="['/tasks']">Tasks</button>
+</div>
+<hr/>
+<router-outlet></router-outlet>
