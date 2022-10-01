@@ -1,0 +1,6 @@
+<h1>Widgets, widgets, and more widgets</h1>
+<hr/>
+<app-create-widget></app-create-widget>
+<hr/>
+<app-list-widgets [widgets]="widgets" (getWidgetsEmitter)="getWidgets()" (setSelectedWidgetEmitter)="setSelectedWidget($event)"></app-list-widgets>
+<app-edit-widgets [widget]="selectedWidget" (getWidgetsEmitter)="getWidgets()"></app-edit-widgets>

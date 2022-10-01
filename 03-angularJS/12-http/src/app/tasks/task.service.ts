@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import { map } from "rxjs";
+import "rxjs";
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {

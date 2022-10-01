@@ -1,0 +1,16 @@
+<h3>Edit a Widget</h3>
+<form (submit)="onSubmit(formData)" #formData="ngForm">
+    <input
+        type="hidden"
+        name="id"
+        [(ngModel)]="widget.id"
+        #id="ngModel"
+    >
+    <input
+        type="text"
+        name="name"
+        [(ngModel)]="widget.name"
+        #name="ngModel"
+    >
+    <input type="submit">
+</form>

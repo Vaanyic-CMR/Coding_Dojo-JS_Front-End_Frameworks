@@ -1,0 +1,7 @@
+<h3>List of all Widgets</h3>
+<ul *ngFor="let widget of widgets; index as idx">
+    <li>{{widget.name}} | 
+        <button (click)="deleteWidget(idx)">Delete</button>
+        <button (click)="editWidget(idx)">Edit</button>
+    </li>
+</ul>
